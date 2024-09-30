@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="articles.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <ul>
+                <li class="list active" style="--clr:#f44336;">
+                    <a href="../index.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Accueil</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#ffa117;">
+                    <a href="/about/about.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">À propos de moi</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#0fc70f;">
+                    <a href="/competence/skill.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="text">Articles</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#2196f3;">
+                    <a href="/contact/contact.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function () {
+                navigation.classList.toggle('open')
+            }
+
+            const list = document.querySelectorAll('.list');
+            function activeLink() {
+                list.forEach((item) =>
+                    item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+                item.addEventListener('click', activeLink))
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </header>
+
+    <main>
+        <h2>Un projet marquant</h2>
+        <p>Une des missions qui m'a été confiée durant mon stage a consisté à mettre en place un outil de monitoring au sein de l'entreprise, plus précisément sur les serveurs, les switchs et les machines personnelles. Cette mission a été à la fois un défi stimulant et une grande opportunité d'apprentissage.</p>
+        
+        <p>Pour ce projet, j'ai choisi d'utiliser <strong>Checkmk</strong>, un outil de monitoring robuste et flexible qui permet de surveiller l'état des infrastructures informatiques. Lors de ma découverte de Checkmk, j'ai été impressionné par les nombreuses fonctionnalités qu'il offre, notamment la capacité de collecter des données sur divers systèmes et d'envoyer des alertes en temps réel en cas de dysfonctionnement.</p>
+        
+        <p>Une fois que j'ai pris le temps de comprendre l'outil et d'explorer les différents aspects que je pouvais implémenter, j'ai procédé à la mise en production de Checkmk. Ce processus a nécessité une configuration minutieuse pour m'assurer que l'outil fonctionne de manière optimale sur l'ensemble des dispositifs que nous souhaitions surveiller.</p>
+        
+        <p>Après avoir déployé l'outil, j'ai pris l'initiative de demander à mes collègues s'ils avaient des besoins spécifiques en matière de surveillance. Il était important pour moi d'adapter l'outil à leurs exigences afin de maximiser son efficacité. Une demande qui est souvent revenue concernait la détection des mises à jour logicielles sur les machines. En réponse à cela, j'ai configuré Checkmk pour qu'il puisse détecter automatiquement les mises à jour disponibles, ce qui a permis à l'équipe de rester à jour avec les dernières versions des logiciels installés.</p>
+        
+        <p>Un autre aspect important du monitoring concerne la gestion des alertes. J'ai choisi d'intégrer les alertes via <strong>Discord</strong>, car c'était l'outil de communication le plus utilisé au sein de l'entreprise. Cela a permis à mes collègues de recevoir des notifications en temps réel directement sur le canal de discussion dédié, assurant ainsi une réponse rapide en cas de problèmes détectés par l'outil. L'intégration de Checkmk avec Discord a facilité la communication et a renforcé notre capacité à résoudre rapidement les incidents.</p>
+        
+        <p>Cette expérience m'a non seulement permis d'approfondir mes compétences techniques, mais aussi de mieux comprendre l'importance de l'écoute et de la collaboration au sein d'une équipe. Le feedback de mes collègues a été essentiel pour garantir que l'outil réponde à leurs besoins et améliore notre efficacité opérationnelle.</p>
+    </main>
+</body>
+
+</html>

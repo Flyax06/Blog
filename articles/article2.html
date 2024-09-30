@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="articles.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <ul>
+                <li class="list active" style="--clr:#f44336;">
+                    <a href="../index.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Accueil</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#ffa117;">
+                    <a href="/about/about.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">À propos de moi</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#0fc70f;">
+                    <a href="/competence/skill.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="text">Articles</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#2196f3;">
+                    <a href="/contact/contact.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function () {
+                navigation.classList.toggle('open')
+            }
+
+            const list = document.querySelectorAll('.list');
+            function activeLink() {
+                list.forEach((item) =>
+                    item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+                item.addEventListener('click', activeLink))
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </header>
+
+    <main>
+        <h2>Les compétences que j'ai développées</h2>
+        <p>Durant mon stage, j'ai développé énormément de compétences techniques, mais aussi des compétences sociales qui, je le sais, m'aideront pour la suite de mon parcours et mon avenir.</p>
+
+        <p>Sur le plan technique, j'ai eu l'opportunité de travailler sur divers projets, chacun me poussant à sortir de ma zone de confort. J'ai particulièrement renforcé mes compétences dans des outils et technologies clés comme <strong>Docker</strong> et <strong>Kubernetes</strong>, qui m'ont permis de comprendre les mécanismes d'orchestration des conteneurs et d'optimiser l'infrastructure pour une meilleure scalabilité et résilience.</p>
+
+        <p>J'ai également acquis une solide expérience en <strong>infrastructure</strong> en général, notamment à travers la gestion de systèmes sous <strong>Linux</strong> et l'automatisation des processus via des pipelines <strong>CI/CD</strong>. Cette maîtrise des pipelines d'intégration continue et de déploiement m'a permis de contribuer à la fluidité des livraisons et à l'amélioration des workflows au sein de l'équipe.</p>
+
+        <p>En parallèle, mes compétences en <strong>Python</strong> se sont considérablement renforcées, que ce soit pour l'écriture de scripts ou pour le développement d'outils de <strong>monitoring</strong>. Ces outils nous permettaient de suivre en temps réel l'état des systèmes et des applications, garantissant une meilleure réactivité en cas de problème.</p>
+
+        <p>Mon stage m'a également permis d'explorer des aspects plus spécifiques à la <strong>cybersécurité</strong>, en particulier à travers l'application de méthodes de <strong>pentest</strong>. Cela m'a donné une approche plus rigoureuse de l'identification des failles et de la sécurisation des infrastructures.</p>
+
+        <p>Cependant, au-delà des aspects techniques, mon stage m'a également offert une grande opportunité de développer mes compétences sociales. Travailler en équipe, communiquer efficacement avec mes collègues, et m'intégrer dans un environnement professionnel ont été des expériences aussi formatrices que passionnantes. J'ai appris à collaborer avec des experts de différents domaines, à gérer des projets en respectant des délais stricts, et à présenter mes travaux lors de réunions d'équipe.</p>
+
+        <p>Ces interactions m'ont permis de prendre conscience de l'importance du <strong>travail d'équipe</strong> et de la <strong>communication</strong> dans le succès d'un projet. J'ai également beaucoup appris sur le rôle de la <strong>résolution de conflits</strong> et de la <strong>négociation</strong>, surtout lors de situations où les priorités de l'équipe divergeaient ou lorsque des imprévus survenaient.</p>
+
+        <p>Un autre aspect crucial que j'ai découvert est l'<strong>adaptabilité</strong>. Que ce soit pour m'ajuster à un nouvel environnement de travail, adopter des outils que je ne maîtrisais pas encore, ou comprendre rapidement des contextes techniques complexes, cette capacité à être flexible s'est révélée primordiale.</p>
+
+        <p>Je ressors de cette expérience avec une confiance accrue en mes compétences, mais aussi avec une vision plus claire de ce que je souhaite pour mon avenir professionnel. Mon stage m'a permis non seulement d'acquérir des savoir-faire concrets, mais également d'apprendre à travailler au sein d'une équipe dynamique, ce qui sera un atout précieux pour mes futurs projets.</p>
+    </main>
+</body>
+
+</html>

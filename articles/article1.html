@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="articles.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <ul>
+                <li class="list active" style="--clr:#f44336;">
+                    <a href="../index.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Accueil</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#ffa117;">
+                    <a href="/about/about.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">À propos de moi</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#0fc70f;">
+                    <a href="/competence/skill.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="text">Articles</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#2196f3;">
+                    <a href="/contact/contact.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function () {
+                navigation.classList.toggle('open')
+            }
+
+            const list = document.querySelectorAll('.list');
+            function activeLink() {
+                list.forEach((item) =>
+                    item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+                item.addEventListener('click', activeLink))
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </header>
+
+    <main>
+        <h2>Mon premier jour de stage</h2>
+        <p>
+            J'ai commencé mon stage de 2ème année dans l'entreprise Videtics le 10 juin 2024. Mon premier jour là-bas a été une grande découverte pour moi. Mon mentor de stage, Alexandre REBOUL, m'a fait découvrir en premier lieu les locaux de l'entreprise et toutes les installations mises à ma disposition. Je suis arrivé bien en avance et j'ai donc pu rencontrer tous mes autres collègues de travail un par un pour me présenter. Au bout de moins d'une heure, j'avais déjà une très bonne impression de l'entreprise et des personnes avec qui j'allais travailler, ce qui m'a beaucoup aidé par la suite.
+        </p>
+        <p>
+            Après la visite des locaux, j'ai pris place à mon bureau et découvert mon environnement de travail, composé principalement d'un Mac. C'était la première fois que j'utilisais un Mac, et je dois avouer que j'étais un peu déstabilisé au début. Les raccourcis clavier, la navigation, tout me semblait un peu différent de ce à quoi j'étais habitué. Heureusement, Alexandre et mes collègues ont été très compréhensifs et m'ont donné quelques conseils pour m'adapter rapidement. Au bout de quelques heures, je commençais déjà à me sentir plus à l’aise avec l’interface, et j'ai même commencé à apprécier la fluidité de l'outil.
+        </p>
+        <p>
+            Ensuite, Alexandre m'a présenté mes premières missions. Mon rôle principal consistait à ajouter un nouvel outil dans une pipeline déjà en place. J'étais ravi de pouvoir toucher directement à des aspects techniques dès le début. En parallèle, il m'a été confié la création d'un outil de monitoring pour suivre les performances des différents processus de l'entreprise. Ces missions, bien que complexes, étaient exactement ce que je recherchais pour renforcer mes compétences et approfondir mes connaissances en cybersécurité et en développement.
+        </p>
+        <p>
+            La matinée est passée à une vitesse folle, et bientôt, l’heure de la pause déjeuner est arrivée. Nous avons tous mangé ensemble, et j'ai pu échanger plus en profondeur avec mon équipe. Ils étaient très curieux de mon parcours, notamment de mes études en cybersécurité, et m’ont posé beaucoup de questions sur mes motivations et ce que j’aimais dans ce domaine. J'ai été agréablement surpris par l'intérêt qu'ils portaient à mon travail et par leur bienveillance.
+        </p>
+        <p>
+            Après cette pause agréable et conviviale, j'ai repris mes missions avec un peu plus de confiance. Alexandre m’a accompagné tout au long de l’après-midi pour m'assurer que j'avais bien saisi les enjeux de mes tâches. Grâce à son soutien, j'ai pu avancer sereinement et me sentir vraiment utile dès ce premier jour.
+        </p>
+        <p>
+            La journée s'est terminée à 17h, et en sortant des bureaux, je ne pouvais m'empêcher de ressentir un sentiment de satisfaction. J'étais excité à l'idée de ce qui m'attendait dans les semaines à venir et impatient d’apprendre encore plus. C'était définitivement un excellent départ pour ce stage, et je me sentais déjà bien intégré dans cette nouvelle équipe.
+        </p>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="articles.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <ul>
+                <li class="list active" style="--clr:#f44336;">
+                    <a href="../index.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Accueil</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#ffa117;">
+                    <a href="/about/about.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">À propos de moi</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#0fc70f;">
+                    <a href="/competence/skill.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="text">Articles</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#2196f3;">
+                    <a href="/contact/contact.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function () {
+                navigation.classList.toggle('open')
+            }
+
+            const list = document.querySelectorAll('.list');
+            function activeLink() {
+                list.forEach((item) =>
+                    item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+                item.addEventListener('click', activeLink))
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </header>
+
+    <main>
+        <h2>Ce que j'ai appris sur moi-même</h2>
+        <p>Après plusieurs mois passés au sein de l'entreprise, il est temps de faire un bilan de cette expérience enrichissante. Ce stage a été une véritable opportunité d'apprentissage et de développement personnel.</p>
+
+        <p>Tout d'abord, j'ai acquis de nombreuses compétences techniques qui seront essentielles pour ma future carrière. J'ai eu l'occasion de travailler avec des outils tels que Docker et Kubernetes, qui sont devenus des incontournables dans le domaine de l'informatique. La mise en place d'un outil de monitoring avec Checkmk a également été un projet marquant, me permettant de comprendre l'importance de la surveillance des systèmes informatiques.</p>
+
+        <p>En plus des compétences techniques, ce stage m'a permis de développer mes compétences sociales. Travailler dans un open space et partager des moments avec mes collègues m'a appris l'importance du travail en équipe et de la communication. J'ai noué des relations avec des personnes de mon âge, ce qui a facilité notre collaboration et créé une ambiance de travail agréable.</p>
+
+        <p>Un autre point fort de mon stage a été l'encadrement dont j'ai bénéficié. Mon équipe était toujours prête à répondre à mes questions et à partager leurs connaissances. Cela a non seulement facilité mon intégration, mais m'a également permis d'apprendre de manière plus efficace.</p>
+
+        <p>Je tiens également à remercier chaleureusement Alexandre Reboul, qui a accepté de me prendre en stage. Son soutien et sa confiance m'ont motivé à donner le meilleur de moi-même tout au long de cette expérience.</p>
+
+        <p>Enfin, ce stage m'a confirmé mon envie de poursuivre une carrière dans le domaine de l'informatique, en particulier dans la cybersécurité. J'ai découvert à quel point ce secteur est dynamique et en constante évolution, et j'ai hâte de mettre en pratique toutes les compétences que j'ai acquises.</p>
+
+        <p>En résumé, ce stage a été une expérience très positive qui m'a permis de grandir tant sur le plan professionnel que personnel. Je suis reconnaissant envers mes collègues et mon entreprise pour leur accueil et leur soutien. Je suis désormais prêt à relever de nouveaux défis et à continuer mon parcours dans le monde de l'informatique.</p>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>Sidebar Menu</title>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <ul>
+                <li class="list" style="--clr:#f44336;">
+                    <a href="../index.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Accueil</span>
+                    </a>
+                </li>
+                <li class="list active" style="--clr:#ffa117;">
+                    <a href="about.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">À propos de moi</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#0fc70f;">
+                    <a href="../competence/skill.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="text">Articles</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#2196f3;">
+                    <a href="../contact/contact.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">Contact</span>
+                    </a>
+                </li>
+                <!-- <li class="list" style="--clr:#b145e9;">
+                    <a href="#" class="menu">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="text">Settings</span>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+
+        <script>
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function () {
+                navigation.classList.toggle('open')
+            }
+
+            const list = document.querySelectorAll('.list');
+            function activeLink() {
+                list.forEach((item) =>
+                    item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+                item.addEventListener('click', activeLink))
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>À propos de moi</h2>
+            <p>Je m'appelle Lorenzo GOTTI, et je suis un passionné d'informatique. Actuellement en 3ème année de cursus à Sophia Ynov Campus, je m'oriente vers la cybersécurité. Mon objectif est d'apporter des solutions innovantes tout en restant constamment à l'affût des dernières tendances en matière de sécurité informatique.</p>
+    
+            <p>J'ai obtenu mon BAC STI2D avec une spécialité en Systèmes Informatiques et Numériques (SIN). Par la suite, j'ai poursuivi mon parcours à Ynov jusqu'en B3. J'ai eu l'opportunité de travailler avec une entreprise, Videtics, où j'ai pu développer des compétences en analyse de données et en gestion de la sécurité. Cette expérience m'a permis de renforcer ma capacité à résoudre des problèmes techniques complexes tout en développant mes compétences en cybersécurité.</p>
+    
+            <p>Pour en savoir plus sur mon parcours, vous pouvez consulter mon CV et mon profil LinkedIn via les liens ci-dessous :</p>
+    
+            <ul class="links">
+                <li><a href="../CV.pdf" target="_blank">Télécharger mon CV</a></li>
+                <li><a href="https://www.linkedin.com/in/lorenzo-gotti-b8a473250/" target="_blank">Voir mon profil LinkedIn</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

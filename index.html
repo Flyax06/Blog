@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <ul>
+                <li class="list active" style="--clr:#f44336;">
+                    <a href="index.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Accueil</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#ffa117;">
+                    <a href="./about/about.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">À propos de moi</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#0fc70f;">
+                    <a href="./competence/skill.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="text">Articles</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#2196f3;">
+                    <a href="./contact/contact.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function () {
+                navigation.classList.toggle('open');
+            }
+
+            const list = document.querySelectorAll('.list');
+            function activeLink() {
+                list.forEach((item) =>
+                    item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+                item.addEventListener('click', activeLink));
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>Mon blog</h2>
+            <p>Bienvenue sur mon blog ! Ici, je partage ma passion pour l'informatique et la cybersécurité, en explorant des sujets variés allant des nouvelles technologies aux meilleures pratiques en matière de sécurité. Mon objectif est d'informer et d'inspirer, tout en offrant des conseils pratiques et des analyses sur les tendances actuelles.</p>
+            
+            <h2>Qui je suis</h2>
+            <p>Je suis Lorenzo GOTTI, étudiant en 3ème année à Sophia Ynov Campus, spécialisé en cybersécurité. Avec un parcours en Systèmes Informatiques et Numériques, je suis toujours à la recherche de solutions innovantes pour relever les défis de notre époque numérique.</p>
+        </section>
+
+        <section class="company-info">
+            <h2>À propos de l'entreprise</h2>
+            <p>Videtics est une startup française innovante, fondée en 2019 et située à Sophia Antipolis, un pôle
+                technologique réputé de la Côte d'Azur. L'entreprise se spécialise dans le développement de solutions
+                d'analyse vidéo utilisant l'intelligence artificielle, principalement destinées à la vidéoprotection.
+                Son équipe, forte de 15 ans d'expérience dans le domaine de la sécurité, conçoit des outils permettant
+                d'analyser en temps réel les données vidéo captées par les systèmes de surveillance existants.</p>
+            <p>L'environnement de travail chez Videtics est dynamique et axé sur l'innovation. L'entreprise a récemment
+                levé 2 millions d'euros pour financer sa croissance, ce qui témoigne de sa vision prometteuse sur le
+                marché de la DeepTech.</p>
+        </section>
+    </main>
+</body>
+
+</html>

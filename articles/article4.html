@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="articles.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <ul>
+                <li class="list active" style="--clr:#f44336;">
+                    <a href="../index.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Accueil</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#ffa117;">
+                    <a href="/about/about.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">À propos de moi</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#0fc70f;">
+                    <a href="/competence/skill.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="text">Articles</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#2196f3;">
+                    <a href="/contact/contact.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function () {
+                navigation.classList.toggle('open')
+            }
+
+            const list = document.querySelectorAll('.list');
+            function activeLink() {
+                list.forEach((item) =>
+                    item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+                item.addEventListener('click', activeLink))
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </header>
+
+    <main>
+        <h2>L'importance du travail en équipe</h2>
+        <p>Durant mon stage, j'ai réalisé à quel point le travail en équipe est crucial dans un environnement professionnel. Au début, j'étais un peu nerveux à l'idée de collaborer avec des collègues que je ne connaissais pas, mais j'ai rapidement compris que la synergie entre les membres d'une équipe peut faire toute la différence.</p>
+        
+        <p>Le travail en équipe permet de rassembler des compétences diverses. Chacun a ses points forts et ses domaines d'expertise, et lorsque nous unissons nos forces, nous sommes capables de réaliser des projets bien plus ambitieux que si nous travaillions seuls. Par exemple, dans mon équipe, certains collègues étaient experts en programmation, tandis que d'autres excellaient dans la gestion de projets. En combinant nos compétences, nous avons réussi à accomplir des tâches complexes de manière efficace.</p>
+        
+        <p>Une autre grande valeur du travail en équipe est la créativité. Mon entreprise fonctionne dans un open space, et durant les pauses déjeuner, nous avions l'habitude de discuter ensemble. Cela nous apportait beaucoup d'idées nouvelles et nous permettait de nous rapprocher. De plus, l'équipe de cybersécurité avec laquelle je travaillais était vraiment géniale. Les gars étaient de mon âge, donc nous nous sommes très vite entendus. Ces échanges informels ont renforcé notre esprit d'équipe et ont souvent conduit à des solutions innovantes pour nos projets.</p>
+        
+        <p>La communication est également un facteur clé dans le travail en équipe. En discutant régulièrement de nos avancements, de nos défis et de nos attentes, nous avons pu maintenir une bonne dynamique de groupe. J'ai appris qu'il est essentiel d'écouter les autres et d'être ouvert aux critiques constructives. Cela renforce non seulement les liens entre les membres de l'équipe, mais améliore aussi la qualité du travail produit.</p>
+        
+        <p>Enfin, le travail en équipe permet de développer des compétences sociales. Travailler avec d'autres personnes m'a aidé à mieux gérer les conflits, à renforcer ma capacité à négocier et à améliorer ma communication. Ces compétences seront sans aucun doute précieuses pour ma carrière future.</p>
+        
+        <p>En résumé, le travail en équipe est bien plus qu'une simple collaboration. C'est un processus qui favorise l'apprentissage, la créativité et le développement personnel. Mon stage m'a permis de vivre cette expérience de près, et je suis convaincu que ces leçons me suivront tout au long de ma carrière.</p>
+    </main>
+</body>
+
+</html>

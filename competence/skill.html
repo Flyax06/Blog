@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="skill.css">
+    <title>Sidebar Menu</title>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <ul>
+                <li class="list" style="--clr:#f44336;">
+                    <a href="../index.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Accueil</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#ffa117;">
+                    <a href="../about/about.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">À propos de moi</span>
+                    </a>
+                </li>
+                <li class="list active" style="--clr:#0fc70f;">
+                    <a href="skill.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="text">Articles</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr:#2196f3;">
+                    <a href="../contact/contact.html" class="menu">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">Contact</span>
+                    </a>
+                </li>
+                <!-- <li class="list" style="--clr:#b145e9;">
+                    <a href="#" class="menu">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="text">Settings</span>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+
+        <script>
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function () {
+                navigation.classList.toggle('open')
+            }
+
+            const list = document.querySelectorAll('.list');
+            function activeLink() {
+                list.forEach((item) =>
+                    item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+                item.addEventListener('click', activeLink))
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </header>
+
+    <main>
+        <h2>Articles</h2>
+        
+        <div class="article">
+            <h3>1. Mon premier jour de stage</h3>
+            <p>J'ai commencé mon stage de 2ème année dans l'entreprise Videtics le 10 juin 2024. Mon premier jour là-bas a été une grande découverte...
+            <a href="../articles/article1.html" class="read-more">Lire la suite</a>
+            </p>
+        </div>
+
+        <div class="article">
+            <h3>2. Les compétences que j'ai développées</h3>
+            <p>Durant mon stage, j'ai développé énormément de compétences techniques, mais aussi des compétences sociales...
+            <a href="../articles/article2.html" class="read-more">Lire la suite</a>
+            </p>
+        </div>
+
+        <div class="article">
+            <h3>3. Un projet marquant</h3>
+            <p>Une des missions qui m'a été confiée durant mon stage a consisté à mettre en place un outil de monitoring au sein de l'entreprise...
+            <a href="../articles/article3.html" class="read-more">Lire la suite</a>
+            </p>
+        </div>
+
+        <div class="article">
+            <h3>4. L'importance du travail en équipe</h3>
+            <p>Durant mon stage, j'ai réalisé à quel point le travail en équipe est crucial dans un environnement professionnel. Au début, j'étais un peu nerveux...
+            <a href="../articles/article4.html" class="read-more">Lire la suite</a>
+            </p>
+        </div>
+
+        <div class="article">
+            <h3>5. Ce que j'ai appris sur moi-même</h3>
+            <p>Après plusieurs mois passés au sein de l'entreprise, il est temps de faire un bilan de cette expérience enrichissante...
+            <a href="../articles/article5.html" class="read-more">Lire la suite</a>
+            </p>
+        </div>
+    </main>
+</body>
+
+</html>
